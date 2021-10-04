@@ -16,6 +16,11 @@ data:
     - icon: ':warning:'
       path: lib/compress.cpp
       title: "Compress (\u5EA7\u6A19\u5727\u7E2E)"
+  - name: template
+    pages:
+    - icon: ':warning:'
+      path: template/Template.cpp
+      title: template/Template.cpp
   verificationCategories:
   - name: .
     pages:
