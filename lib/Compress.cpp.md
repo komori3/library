@@ -39,3 +39,14 @@ redirect_from:
 - /library/lib/Compress.cpp.html
 title: "Compress (\u5EA7\u6A19\u5727\u7E2E)"
 ---
+## 概要
+
+TBD
+
+## 使い方
+
+TBD
+
+## 計算量
+
+TBD
