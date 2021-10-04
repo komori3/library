@@ -13,7 +13,7 @@ public:
             for (T j = i * i; j <= size; j += i)
                 p[j] = false;
     }
-    std::vector<T> get_primes() {
+    std::vector<T> get_primes() const {
         std::vector<T> ret;
         for (T i = 0; i <= size; i++)
             if (p[i]) ret.push_back(i);
