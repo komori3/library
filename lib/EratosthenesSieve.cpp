@@ -1,5 +1,5 @@
 /**
- * @brief EratosthenesSieve
+ * @brief Sieve of Eratosthenes (エラトステネスの篩)
  * @docs docs/EratosthenesSieve.md
  */
 template<typename T>
