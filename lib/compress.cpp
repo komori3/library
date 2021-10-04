@@ -1,6 +1,6 @@
 /**
  * @brief Compress (座標圧縮)
- * @docs docs/compress.md
+ * @docs docs/Compress.md
  */
 template<typename T>
 struct Compress {
