@@ -14,7 +14,7 @@ int main() {
 
     auto primes = EratosthenesSieve(N).get_primes();
 
-    int P = (int)primes.size(), X = (P - B) / A;
+    int P = (int)primes.size(), X = (P + A - B - 1) / A;
 
     cout << format("%d %d\n", P, X);
     for (int i = 0; A * i + B < (int)primes.size(); i++) {
