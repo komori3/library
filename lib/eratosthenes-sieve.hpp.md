@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/verify/yosupo-enumerate-primes.test.cpp
+    title: test/verify/yosupo-enumerate-primes.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: docs/eratosthenes-sieve.md
     document_title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\
@@ -34,8 +37,9 @@ data:
   path: lib/eratosthenes-sieve.hpp
   requiredBy: []
   timestamp: '2021-10-06 03:41:28+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/verify/yosupo-enumerate-primes.test.cpp
 documentation_of: lib/eratosthenes-sieve.hpp
 layout: document
 redirect_from:

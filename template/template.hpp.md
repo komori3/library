@@ -9,9 +9,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/aoj-ntl-1-a.test.cpp
     title: test/verify/aoj-ntl-1-a.test.cpp
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/verify/yosupo-enumerate-primes.test.cpp
+    title: test/verify/yosupo-enumerate-primes.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"template/template.hpp\"\n#define _CRT_SECURE_NO_WARNINGS\n\
@@ -140,10 +143,11 @@ data:
   path: template/template.hpp
   requiredBy: []
   timestamp: '2021-10-06 02:49:07+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/verify/aoj-ntl-1-a.test.cpp
   - test/verify/aoj-grl-1-c.test.cpp
+  - test/verify/yosupo-enumerate-primes.test.cpp
 documentation_of: template/template.hpp
 layout: document
 redirect_from:

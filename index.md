@@ -9,7 +9,7 @@ data:
     - icon: ':warning:'
       path: lib/compress.hpp
       title: "compress (\u5EA7\u6A19\u5727\u7E2E)"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: lib/eratosthenes-sieve.hpp
       title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
         \u7BE9)"
@@ -24,7 +24,7 @@ data:
         \ APSP)"
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
@@ -36,5 +36,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/aoj-ntl-1-a.test.cpp
       title: test/verify/aoj-ntl-1-a.test.cpp
+    - icon: ':x:'
+      path: test/verify/yosupo-enumerate-primes.test.cpp
+      title: test/verify/yosupo-enumerate-primes.test.cpp
 layout: toppage
 ---

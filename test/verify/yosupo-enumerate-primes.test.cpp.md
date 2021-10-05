@@ -1,35 +1,35 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: lib/factorize-trial-division.hpp
-    title: "factorize-trial-division (\u8A66\u3057\u5272\u308A\u306B\u3088\u308B\u7D20\
-      \u56E0\u6570\u5206\u89E3)"
+  - icon: ':x:'
+    path: lib/eratosthenes-sieve.hpp
+    title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
+      \u7BE9)"
   - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A
+    PROBLEM: https://judge.yosupo.jp/problem/enumerate_primes
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A
-  bundledCode: "#line 1 \"test/verify/aoj-ntl-1-a.test.cpp\"\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A\"\
-    \n\n#line 1 \"template/template.hpp\"\n#define _CRT_SECURE_NO_WARNINGS\n#define\
-    \ _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n#line 5 \"template/template.hpp\"\
-    \n#ifdef _MSC_VER\n#include <ppl.h>\n#else\n#pragma GCC target(\"avx2\")\n#pragma\
-    \ GCC optimize(\"O3\")\n#pragma GCC optimize(\"unroll-loops\")\n#endif\n/* const\
-    \ */\nconstexpr double PI = 3.141592653589793238462643;\n/* io */\nnamespace aux\
-    \ {\n    template<typename T, unsigned N, unsigned L> struct tp { static void\
-    \ print(std::ostream& os, const T& v) { os << std::get<N>(v) << \", \"; tp<T,\
-    \ N + 1, L>::print(os, v); } };\n    template<typename T, unsigned N> struct tp<T,\
-    \ N, N> { static void print(std::ostream& os, const T& v) { os << std::get<N>(v);\
-    \ } };\n}\ntemplate<typename... Ts> std::ostream& operator<<(std::ostream& os,\
-    \ const std::tuple<Ts...>& t) { os << '['; aux::tp<std::tuple<Ts...>, 0, sizeof...(Ts)\
+    - https://judge.yosupo.jp/problem/enumerate_primes
+  bundledCode: "#line 1 \"test/verify/yosupo-enumerate-primes.test.cpp\"\n#define\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/enumerate_primes\"\n\n#line 1 \"template/template.hpp\"\
+    \n#define _CRT_SECURE_NO_WARNINGS\n#define _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n\
+    #line 5 \"template/template.hpp\"\n#ifdef _MSC_VER\n#include <ppl.h>\n#else\n\
+    #pragma GCC target(\"avx2\")\n#pragma GCC optimize(\"O3\")\n#pragma GCC optimize(\"\
+    unroll-loops\")\n#endif\n/* const */\nconstexpr double PI = 3.141592653589793238462643;\n\
+    /* io */\nnamespace aux {\n    template<typename T, unsigned N, unsigned L> struct\
+    \ tp { static void print(std::ostream& os, const T& v) { os << std::get<N>(v)\
+    \ << \", \"; tp<T, N + 1, L>::print(os, v); } };\n    template<typename T, unsigned\
+    \ N> struct tp<T, N, N> { static void print(std::ostream& os, const T& v) { os\
+    \ << std::get<N>(v); } };\n}\ntemplate<typename... Ts> std::ostream& operator<<(std::ostream&\
+    \ os, const std::tuple<Ts...>& t) { os << '['; aux::tp<std::tuple<Ts...>, 0, sizeof...(Ts)\
     \ - 1>::print(os, t); os << ']'; return os; }\ntemplate <class T, class = typename\
     \ T::iterator, std::enable_if_t<!std::is_same<T, std::string>::value, int> = 0>\
     \ std::ostream& operator<<(std::ostream& os, T const& a);\ntemplate <class T,\
@@ -79,42 +79,43 @@ data:
     \ false; }\ntemplate<typename A, size_t N, typename T> inline void Fill(A(&array)[N],\
     \ const T& val) { std::fill((T*)array, (T*)(array + N), val); }\n\nusing ll =\
     \ long long;\nusing pii = std::pair<int, int>;\nusing pll = std::pair<ll, ll>;\n\
-    using pdd = std::pair<double, double>;\n#line 4 \"test/verify/aoj-ntl-1-a.test.cpp\"\
-    \n\n#line 1 \"lib/factorize-trial-division.hpp\"\n/**\n * @brief factorize-trial-division\
-    \ (\u8A66\u3057\u5272\u308A\u306B\u3088\u308B\u7D20\u56E0\u6570\u5206\u89E3)\n\
-    \ * @docs docs/factorize-trial-division.md\n */\ntemplate<typename T = int>\n\
-    std::map<T, int> factorize(T n) {\n    std::map<T, int> factor_map;\n    for (T\
-    \ i = 2; i * i <= n; i++) {\n        while (!(n % i)) {\n            factor_map[i]++;\
-    \ n /= i;\n        }\n    }\n    if (n > 1) factor_map[n]++;\n    return factor_map;\n\
-    }\n#line 6 \"test/verify/aoj-ntl-1-a.test.cpp\"\n\nint main() {\n    using std::cin,\
-    \ std::cout, std::endl, std::ios;\n    cin.tie(0);\n    ios::sync_with_stdio(false);\n\
-    \n    int n;\n    cin >> n;\n    auto factor_map = factorize(n);\n    std::vector<int>\
-    \ factors;\n    for (const auto& [factor, count] : factor_map) {\n        for\
-    \ (int i = 0; i < count; i++) {\n            factors.push_back(factor);\n    \
-    \    }\n    }\n    cout << n << ':';\n    for (ll factor : factors) {\n      \
-    \  cout << ' ' << factor;\n    }\n    cout << '\\n';\n\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=NTL_1_A\"\
-    \n\n#include \"../../template/template.hpp\"\n\n#include \"../../lib/factorize-trial-division.hpp\"\
+    using pdd = std::pair<double, double>;\n#line 4 \"test/verify/yosupo-enumerate-primes.test.cpp\"\
+    \n\n#line 1 \"lib/eratosthenes-sieve.hpp\"\n/**\n * @brief sieve of Eratosthenes\
+    \ (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9)\n * @docs docs/eratosthenes-sieve.md\n\
+    \ */\ntemplate<typename T>\nclass EratosthenesSieve {\npublic:\n    T size;\n\
+    \    std::vector<bool> p;\n    EratosthenesSieve(T size) : size(size), p(size\
+    \ + 1, true) {\n        p[0] = p[1] = false;\n        for (T i = 2; i * i <= size;\
+    \ i++) if (p[i])\n            for (T j = i * i; j <= size; j += i)\n         \
+    \       p[j] = false;\n    }\n    std::vector<T> get_primes() const {\n      \
+    \  std::vector<T> ret;\n        for (T i = 0; i <= size; i++)\n            if\
+    \ (p[i]) ret.push_back(i);\n        return ret;\n    }\n};\n#line 6 \"test/verify/yosupo-enumerate-primes.test.cpp\"\
     \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
-    \    ios::sync_with_stdio(false);\n\n    int n;\n    cin >> n;\n    auto factor_map\
-    \ = factorize(n);\n    std::vector<int> factors;\n    for (const auto& [factor,\
-    \ count] : factor_map) {\n        for (int i = 0; i < count; i++) {\n        \
-    \    factors.push_back(factor);\n        }\n    }\n    cout << n << ':';\n   \
-    \ for (ll factor : factors) {\n        cout << ' ' << factor;\n    }\n    cout\
-    \ << '\\n';\n\n    return 0;\n}"
+    \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
+    \    auto ps = EratosthenesSieve(N).get_primes();\n    std::ostringstream oss;\n\
+    \    for (int i = 0; A * i + B < (int)ps.size(); i++) {\n        if (i) cout <<\
+    \ ' ';\n        cout << ps[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
+    \ 0;\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_primes\"\n\n\
+    #include \"../../template/template.hpp\"\n\n#include \"../../lib/eratosthenes-sieve.hpp\"\
+    \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
+    \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
+    \    auto ps = EratosthenesSieve(N).get_primes();\n    std::ostringstream oss;\n\
+    \    for (int i = 0; A * i + B < (int)ps.size(); i++) {\n        if (i) cout <<\
+    \ ' ';\n        cout << ps[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
+    \ 0;\n}"
   dependsOn:
   - template/template.hpp
-  - lib/factorize-trial-division.hpp
+  - lib/eratosthenes-sieve.hpp
   isVerificationFile: true
-  path: test/verify/aoj-ntl-1-a.test.cpp
+  path: test/verify/yosupo-enumerate-primes.test.cpp
   requiredBy: []
-  timestamp: '2021-10-06 03:41:28+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-10-06 04:04:40+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/verify/aoj-ntl-1-a.test.cpp
+documentation_of: test/verify/yosupo-enumerate-primes.test.cpp
 layout: document
 redirect_from:
-- /verify/test/verify/aoj-ntl-1-a.test.cpp
-- /verify/test/verify/aoj-ntl-1-a.test.cpp.html
-title: test/verify/aoj-ntl-1-a.test.cpp
+- /verify/test/verify/yosupo-enumerate-primes.test.cpp
+- /verify/test/verify/yosupo-enumerate-primes.test.cpp.html
+title: test/verify/yosupo-enumerate-primes.test.cpp
 ---
