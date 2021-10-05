@@ -8,10 +8,10 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     _deprecated_at_docs: docs/eratosthenes-sieve.md
-    document_title: "Sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\
+    document_title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\
       \u306E\u7BE9)"
     links: []
-  bundledCode: "#line 1 \"lib/eratosthenes-sieve.hpp\"\n/**\n * @brief Sieve of Eratosthenes\
+  bundledCode: "#line 1 \"lib/eratosthenes-sieve.hpp\"\n/**\n * @brief sieve of Eratosthenes\
     \ (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9)\n * @docs docs/eratosthenes-sieve.md\n\
     \ */\ntemplate<typename T>\nclass EratosthenesSieve {\npublic:\n    T size;\n\
     \    std::vector<bool> p;\n    EratosthenesSieve(T size) : size(size), p(size\
@@ -20,7 +20,7 @@ data:
     \       p[j] = false;\n    }\n    std::vector<T> get_primes() const {\n      \
     \  std::vector<T> ret;\n        for (T i = 0; i <= size; i++)\n            if\
     \ (p[i]) ret.push_back(i);\n        return ret;\n    }\n};\n"
-  code: "/**\n * @brief Sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\
+  code: "/**\n * @brief sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\
     \u30B9\u306E\u7BE9)\n * @docs docs/eratosthenes-sieve.md\n */\ntemplate<typename\
     \ T>\nclass EratosthenesSieve {\npublic:\n    T size;\n    std::vector<bool> p;\n\
     \    EratosthenesSieve(T size) : size(size), p(size + 1, true) {\n        p[0]\
@@ -33,7 +33,7 @@ data:
   isVerificationFile: false
   path: lib/eratosthenes-sieve.hpp
   requiredBy: []
-  timestamp: '2021-10-06 02:49:07+09:00'
+  timestamp: '2021-10-06 03:41:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: lib/eratosthenes-sieve.hpp
@@ -41,7 +41,7 @@ layout: document
 redirect_from:
 - /library/lib/eratosthenes-sieve.hpp
 - /library/lib/eratosthenes-sieve.hpp.html
-title: "Sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\
+title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\
   )"
 ---
 ## 概要

@@ -5,17 +5,18 @@ data:
     pages:
     - icon: ':warning:'
       path: lib/binary_search.hpp
-      title: "Binary Search (\u4E8C\u5206\u63A2\u7D22)"
+      title: "binary search (\u4E8C\u5206\u63A2\u7D22)"
     - icon: ':warning:'
       path: lib/compress.hpp
       title: "compress (\u5EA7\u6A19\u5727\u7E2E)"
     - icon: ':warning:'
       path: lib/eratosthenes-sieve.hpp
-      title: "Sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
+      title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
         \u7BE9)"
-    - icon: ':warning:'
-      path: lib/factorize.hpp
-      title: "factorize (\u7D20\u56E0\u6570\u5206\u89E3)"
+    - icon: ':heavy_check_mark:'
+      path: lib/factorize-trial-division.hpp
+      title: "factorize-trial-division (\u8A66\u3057\u5272\u308A\u306B\u3088\u308B\
+        \u7D20\u56E0\u6570\u5206\u89E3)"
     - icon: ':heavy_check_mark:'
       path: lib/warshall-floyd.hpp
       title: "Warshall-Floyd (\u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\u30ED\u30A4\u30C9\
@@ -32,5 +33,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/verify/aoj-grl-1-c.test.cpp
       title: test/verify/aoj-grl-1-c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/verify/aoj-ntl-1-a.test.cpp
+      title: test/verify/aoj-ntl-1-a.test.cpp
 layout: toppage
 ---

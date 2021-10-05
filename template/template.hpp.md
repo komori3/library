@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/verify/aoj-grl-1-c.test.cpp
     title: test/verify/aoj-grl-1-c.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/verify/aoj-ntl-1-a.test.cpp
+    title: test/verify/aoj-ntl-1-a.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -139,6 +142,7 @@ data:
   timestamp: '2021-10-06 02:49:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/verify/aoj-ntl-1-a.test.cpp
   - test/verify/aoj-grl-1-c.test.cpp
 documentation_of: template/template.hpp
 layout: document
