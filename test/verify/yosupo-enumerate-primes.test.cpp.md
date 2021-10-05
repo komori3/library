@@ -1,18 +1,18 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: lib/eratosthenes-sieve.hpp
     title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
       \u7BE9)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/enumerate_primes
@@ -92,27 +92,27 @@ data:
     \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
     \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
     \n    auto primes = EratosthenesSieve(N).get_primes();\n\n    int P = (int)primes.size(),\
-    \ X = (P - B) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for (int i\
-    \ = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << ' ';\n \
-    \       cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return 0;\n\
-    }\n"
+    \ X = (P + A - B - 1) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for\
+    \ (int i = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << '\
+    \ ';\n        cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
+    \ 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_primes\"\n\n\
     #include \"../../template/template.hpp\"\n\n#include \"../../lib/eratosthenes-sieve.hpp\"\
     \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
     \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
     \n    auto primes = EratosthenesSieve(N).get_primes();\n\n    int P = (int)primes.size(),\
-    \ X = (P - B) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for (int i\
-    \ = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << ' ';\n \
-    \       cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return 0;\n\
-    }"
+    \ X = (P + A - B - 1) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for\
+    \ (int i = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << '\
+    \ ';\n        cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
+    \ 0;\n}"
   dependsOn:
   - template/template.hpp
   - lib/eratosthenes-sieve.hpp
   isVerificationFile: true
   path: test/verify/yosupo-enumerate-primes.test.cpp
   requiredBy: []
-  timestamp: '2021-10-06 04:30:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-10-06 04:35:12+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/yosupo-enumerate-primes.test.cpp
 layout: document
