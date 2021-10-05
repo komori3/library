@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/verify/aoj-grl-1-c.test.cpp
+    title: test/verify/aoj-grl-1-c.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"template/Template.cpp\"\n#define _CRT_SECURE_NO_WARNINGS\n\
@@ -134,8 +137,9 @@ data:
   path: template/Template.cpp
   requiredBy: []
   timestamp: '2021-10-05 00:33:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/verify/aoj-grl-1-c.test.cpp
 documentation_of: template/Template.cpp
 layout: document
 redirect_from:
