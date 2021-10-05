@@ -1,6 +1,6 @@
 /**
- * @brief Binary Search (二分探索)
- * @docs docs/binary_search.md
+ * @brief binary search (二分探索)
+ * @docs docs/binary-search.md
  */
 template<typename T = int, typename F>
 T binary_search(T ng, T ok, F func) {
