@@ -91,25 +91,27 @@ data:
     \ (p[i]) ret.push_back(i);\n        return ret;\n    }\n};\n#line 6 \"test/verify/yosupo-enumerate-primes.test.cpp\"\
     \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
     \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
-    \    auto ps = EratosthenesSieve(N).get_primes();\n    std::ostringstream oss;\n\
-    \    for (int i = 0; A * i + B < (int)ps.size(); i++) {\n        if (i) cout <<\
-    \ ' ';\n        cout << ps[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
-    \ 0;\n}\n"
+    \n    auto primes = EratosthenesSieve(N).get_primes();\n\n    int P = (int)primes.size(),\
+    \ X = (P - B) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for (int i\
+    \ = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << ' ';\n \
+    \       cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return 0;\n\
+    }\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_primes\"\n\n\
     #include \"../../template/template.hpp\"\n\n#include \"../../lib/eratosthenes-sieve.hpp\"\
     \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
     \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
-    \    auto ps = EratosthenesSieve(N).get_primes();\n    std::ostringstream oss;\n\
-    \    for (int i = 0; A * i + B < (int)ps.size(); i++) {\n        if (i) cout <<\
-    \ ' ';\n        cout << ps[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
-    \ 0;\n}"
+    \n    auto primes = EratosthenesSieve(N).get_primes();\n\n    int P = (int)primes.size(),\
+    \ X = (P - B) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for (int i\
+    \ = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << ' ';\n \
+    \       cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return 0;\n\
+    }"
   dependsOn:
   - template/template.hpp
   - lib/eratosthenes-sieve.hpp
   isVerificationFile: true
   path: test/verify/yosupo-enumerate-primes.test.cpp
   requiredBy: []
-  timestamp: '2021-10-06 04:04:40+09:00'
+  timestamp: '2021-10-06 04:30:20+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/verify/yosupo-enumerate-primes.test.cpp
