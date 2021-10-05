@@ -11,11 +11,15 @@ int main() {
 
     int N, A, B;
     cin >> N >> A >> B;
-    auto ps = EratosthenesSieve(N).get_primes();
-    std::ostringstream oss;
-    for (int i = 0; A * i + B < (int)ps.size(); i++) {
+
+    auto primes = EratosthenesSieve(N).get_primes();
+
+    int P = (int)primes.size(), X = (P - B) / A;
+
+    cout << format("%d %d\n", P, X);
+    for (int i = 0; A * i + B < (int)primes.size(); i++) {
         if (i) cout << ' ';
-        cout << ps[A * i + B];
+        cout << primes[A * i + B];
     }
     cout << '\n';
 
