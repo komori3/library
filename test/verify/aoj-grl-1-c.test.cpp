@@ -1,8 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
 
-#include "../../template/Template.cpp"
+#include "../../template/Template.hpp"
 
-#include "../../lib/WarshallFloyd.cpp"
+#include "../../lib/WarshallFloyd.hpp"
 
 int main() {
     cin.tie(0);
