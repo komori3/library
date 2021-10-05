@@ -4,14 +4,14 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: cpp
+  _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     _deprecated_at_docs: docs/EratosthenesSieve.md
     document_title: "Sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\
       \u306E\u7BE9)"
     links: []
-  bundledCode: "#line 1 \"lib/EratosthenesSieve.cpp\"\n/**\n * @brief Sieve of Eratosthenes\
+  bundledCode: "#line 1 \"lib/EratosthenesSieve.hpp\"\n/**\n * @brief Sieve of Eratosthenes\
     \ (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9)\n * @docs docs/EratosthenesSieve.md\n\
     \ */\ntemplate<typename T>\nclass EratosthenesSieve {\npublic:\n    T size;\n\
     \    std::vector<bool> p;\n    EratosthenesSieve(T size) : size(size), p(size\
@@ -31,16 +31,16 @@ data:
     \        return ret;\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: lib/EratosthenesSieve.cpp
+  path: lib/EratosthenesSieve.hpp
   requiredBy: []
-  timestamp: '2021-10-05 07:16:31+09:00'
+  timestamp: '2021-10-06 02:11:22+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: lib/EratosthenesSieve.cpp
+documentation_of: lib/EratosthenesSieve.hpp
 layout: document
 redirect_from:
-- /library/lib/EratosthenesSieve.cpp
-- /library/lib/EratosthenesSieve.cpp.html
+- /library/lib/EratosthenesSieve.hpp
+- /library/lib/EratosthenesSieve.hpp.html
 title: "Sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\
   )"
 ---

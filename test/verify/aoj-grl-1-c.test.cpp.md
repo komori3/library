@@ -2,13 +2,13 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: lib/WarshallFloyd.cpp
+    path: lib/WarshallFloyd.hpp
     title: "Warshall-Floyd (\u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\u30ED\u30A4\u30C9\
       \u6CD5, \u5168\u70B9\u5BFE\u6700\u77ED\u7D4C\u8DEF, All Pair Shortest Path,\
       \ APSP)"
   - icon: ':heavy_check_mark:'
-    path: template/Template.cpp
-    title: template/Template.cpp
+    path: template/Template.hpp
+    title: template/Template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,8 +20,8 @@ data:
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C
   bundledCode: "#line 1 \"test/verify/aoj-grl-1-c.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C\"\
-    \n\n#line 1 \"template/Template.cpp\"\n#define _CRT_SECURE_NO_WARNINGS\n#define\
-    \ _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n#line 5 \"template/Template.cpp\"\
+    \n\n#line 1 \"template/Template.hpp\"\n#define _CRT_SECURE_NO_WARNINGS\n#define\
+    \ _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n#line 5 \"template/Template.hpp\"\
     \n#ifdef _MSC_VER\n#include <ppl.h>\n#else\n#pragma GCC target(\"avx2\")\n#pragma\
     \ GCC optimize(\"O3\")\n#pragma GCC optimize(\"unroll-loops\")\n#endif\n/* const\
     \ */\nconstexpr double PI = 3.141592653589793238462643;\n/* io */\nnamespace aux\
@@ -81,7 +81,7 @@ data:
     \ const T& val) { std::fill((T*)array, (T*)(array + N), val); }\n\nusing ll =\
     \ long long;\nusing pii = std::pair<int, int>;\nusing pll = std::pair<ll, ll>;\n\
     using pdd = std::pair<double, double>;\n\nusing namespace std;\n#line 4 \"test/verify/aoj-grl-1-c.test.cpp\"\
-    \n\n#line 1 \"lib/WarshallFloyd.cpp\"\n/**\n * @brief Warshall-Floyd (\u30EF\u30FC\
+    \n\n#line 1 \"lib/WarshallFloyd.hpp\"\n/**\n * @brief Warshall-Floyd (\u30EF\u30FC\
     \u30B7\u30E3\u30EB\u30D5\u30ED\u30A4\u30C9\u6CD5, \u5168\u70B9\u5BFE\u6700\u77ED\
     \u7D4C\u8DEF, All Pair Shortest Path, APSP)\n * @docs docs/WarshallFloyd.md\n\
     \ */\ntemplate<typename T>\nstruct WarshallFloyd {\n\n    const T inf;\n    const\
@@ -114,7 +114,7 @@ data:
     \ cout << wf.dist[i][j];\n        }\n        cout << endl;\n    }\n\n    return\
     \ 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C\"\
-    \n\n#include \"../../template/Template.cpp\"\n\n#include \"../../lib/WarshallFloyd.cpp\"\
+    \n\n#include \"../../template/Template.hpp\"\n\n#include \"../../lib/WarshallFloyd.hpp\"\
     \n\nint main() {\n    cin.tie(0);\n    ios::sync_with_stdio(false);\n\n    constexpr\
     \ ll inf = INT64_MAX / 8;\n\n    int V, E;\n    cin >> V >> E;\n\n    auto G =\
     \ make_vector<ll>(inf, V, V);\n    for (int u = 0; u < V; u++) {\n        G[u][u]\
@@ -127,12 +127,12 @@ data:
     ;\n            else cout << wf.dist[i][j];\n        }\n        cout << endl;\n\
     \    }\n\n    return 0;\n}"
   dependsOn:
-  - template/Template.cpp
-  - lib/WarshallFloyd.cpp
+  - template/Template.hpp
+  - lib/WarshallFloyd.hpp
   isVerificationFile: true
   path: test/verify/aoj-grl-1-c.test.cpp
   requiredBy: []
-  timestamp: '2021-10-05 09:59:09+09:00'
+  timestamp: '2021-10-06 02:11:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/aoj-grl-1-c.test.cpp

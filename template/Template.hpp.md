@@ -7,12 +7,12 @@ data:
     path: test/verify/aoj-grl-1-c.test.cpp
     title: test/verify/aoj-grl-1-c.test.cpp
   _isVerificationFailed: false
-  _pathExtension: cpp
+  _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"template/Template.cpp\"\n#define _CRT_SECURE_NO_WARNINGS\n\
-    #define _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n#line 5 \"template/Template.cpp\"\
+  bundledCode: "#line 1 \"template/Template.hpp\"\n#define _CRT_SECURE_NO_WARNINGS\n\
+    #define _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n#line 5 \"template/Template.hpp\"\
     \n#ifdef _MSC_VER\n#include <ppl.h>\n#else\n#pragma GCC target(\"avx2\")\n#pragma\
     \ GCC optimize(\"O3\")\n#pragma GCC optimize(\"unroll-loops\")\n#endif\n/* const\
     \ */\nconstexpr double PI = 3.141592653589793238462643;\n/* io */\nnamespace aux\
@@ -134,16 +134,16 @@ data:
     using pdd = std::pair<double, double>;\n\nusing namespace std;"
   dependsOn: []
   isVerificationFile: false
-  path: template/Template.cpp
+  path: template/Template.hpp
   requiredBy: []
-  timestamp: '2021-10-05 00:33:26+09:00'
+  timestamp: '2021-10-06 02:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/aoj-grl-1-c.test.cpp
-documentation_of: template/Template.cpp
+documentation_of: template/Template.hpp
 layout: document
 redirect_from:
-- /library/template/Template.cpp
-- /library/template/Template.cpp.html
-title: template/Template.cpp
+- /library/template/Template.hpp
+- /library/template/Template.hpp.html
+title: template/Template.hpp
 ---

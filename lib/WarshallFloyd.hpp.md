@@ -7,7 +7,7 @@ data:
     path: test/verify/aoj-grl-1-c.test.cpp
     title: test/verify/aoj-grl-1-c.test.cpp
   _isVerificationFailed: false
-  _pathExtension: cpp
+  _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/WarshallFloyd.md
@@ -15,7 +15,7 @@ data:
       \u30C9\u6CD5, \u5168\u70B9\u5BFE\u6700\u77ED\u7D4C\u8DEF, All Pair Shortest\
       \ Path, APSP)"
     links: []
-  bundledCode: "#line 1 \"lib/WarshallFloyd.cpp\"\n/**\n * @brief Warshall-Floyd (\u30EF\
+  bundledCode: "#line 1 \"lib/WarshallFloyd.hpp\"\n/**\n * @brief Warshall-Floyd (\u30EF\
     \u30FC\u30B7\u30E3\u30EB\u30D5\u30ED\u30A4\u30C9\u6CD5, \u5168\u70B9\u5BFE\u6700\
     \u77ED\u7D4C\u8DEF, All Pair Shortest Path, APSP)\n * @docs docs/WarshallFloyd.md\n\
     \ */\ntemplate<typename T>\nstruct WarshallFloyd {\n\n    const T inf;\n    const\
@@ -57,17 +57,17 @@ data:
     \          }\n        }\n        return false;\n    }\n\n};"
   dependsOn: []
   isVerificationFile: false
-  path: lib/WarshallFloyd.cpp
+  path: lib/WarshallFloyd.hpp
   requiredBy: []
-  timestamp: '2021-10-05 09:59:09+09:00'
+  timestamp: '2021-10-06 02:11:22+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/verify/aoj-grl-1-c.test.cpp
-documentation_of: lib/WarshallFloyd.cpp
+documentation_of: lib/WarshallFloyd.hpp
 layout: document
 redirect_from:
-- /library/lib/WarshallFloyd.cpp
-- /library/lib/WarshallFloyd.cpp.html
+- /library/lib/WarshallFloyd.hpp
+- /library/lib/WarshallFloyd.hpp.html
 title: "Warshall-Floyd (\u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\u30ED\u30A4\u30C9\u6CD5\
   , \u5168\u70B9\u5BFE\u6700\u77ED\u7D4C\u8DEF, All Pair Shortest Path, APSP)"
 ---

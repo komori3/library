@@ -4,13 +4,13 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
-  _pathExtension: cpp
+  _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     _deprecated_at_docs: docs/Compress.md
     document_title: "Compress (\u5EA7\u6A19\u5727\u7E2E)"
     links: []
-  bundledCode: "#line 1 \"lib/Compress.cpp\"\n/**\n * @brief Compress (\u5EA7\u6A19\
+  bundledCode: "#line 1 \"lib/Compress.hpp\"\n/**\n * @brief Compress (\u5EA7\u6A19\
     \u5727\u7E2E)\n * @docs docs/Compress.md\n */\ntemplate<typename T>\nstruct Compress\
     \ {\n    std::vector<T> values;\n    std::map<T, int> indices;\n    Compress(const\
     \ std::vector<T>& v) {\n        std::set<T> st(v.begin(), v.end()); // unique\n\
@@ -27,16 +27,16 @@ data:
     \  int get_index(T value) const { return indices.at(value); }\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: lib/Compress.cpp
+  path: lib/Compress.hpp
   requiredBy: []
-  timestamp: '2021-10-05 07:13:29+09:00'
+  timestamp: '2021-10-06 02:11:22+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: lib/Compress.cpp
+documentation_of: lib/Compress.hpp
 layout: document
 redirect_from:
-- /library/lib/Compress.cpp
-- /library/lib/Compress.cpp.html
+- /library/lib/Compress.hpp
+- /library/lib/Compress.hpp.html
 title: "Compress (\u5EA7\u6A19\u5727\u7E2E)"
 ---
 ## 概要
