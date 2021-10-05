@@ -1,6 +1,6 @@
 /**
- * @brief Factorize (素因数分解)
- * @docs docs/Factorize.md
+ * @brief factorize (素因数分解)
+ * @docs docs/factorize.md
  */
 template<typename T = int>
 std::map<T, T> factorize(T n) {

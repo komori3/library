@@ -1,6 +1,6 @@
 /**
  * @brief Sieve of Eratosthenes (エラトステネスの篩)
- * @docs docs/EratosthenesSieve.md
+ * @docs docs/eratosthenes-sieve.md
  */
 template<typename T>
 class EratosthenesSieve {

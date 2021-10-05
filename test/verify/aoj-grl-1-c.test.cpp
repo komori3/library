@@ -1,10 +1,11 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
 
-#include "../../template/Template.hpp"
+#include "../../template/template.hpp"
 
-#include "../../lib/WarshallFloyd.hpp"
+#include "../../lib/warshall-floyd.hpp"
 
 int main() {
+    using std::cin, std::cout, std::endl, std::ios;
     cin.tie(0);
     ios::sync_with_stdio(false);
 
@@ -26,7 +27,7 @@ int main() {
 
     WarshallFloyd<ll> wf(inf, G);
     wf.build();
-    
+
     if (wf.has_negative_loop()) {
         cout << "NEGATIVE CYCLE" << endl;
         return 0;

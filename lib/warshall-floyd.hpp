@@ -1,17 +1,17 @@
 /**
  * @brief Warshall-Floyd (ワーシャルフロイド法, 全点対最短経路, All Pair Shortest Path, APSP)
- * @docs docs/WarshallFloyd.md
+ * @docs docs/warshall-floyd.md
  */
 template<typename T>
 struct WarshallFloyd {
 
     const T inf;
     const int V;
-    vector<vector<T>> dist;
-    vector<vector<int>> next;
+    std::vector<std::vector<T>> dist;
+    std::vector<std::vector<int>> next;
 
     WarshallFloyd() = default;
-    WarshallFloyd(const T& inf, const vector<vector<T>>& dist) : inf(inf), V((int)dist.size()), dist(dist), next(V, vector<int>(V)) {}
+    WarshallFloyd(const T& inf, const std::vector<std::vector<T>>& dist) : inf(inf), V((int)dist.size()), dist(dist), next(V, std::vector<int>(V)) {}
     
     void build() {
         for (int u = 0; u < V; u++) {
@@ -32,8 +32,8 @@ struct WarshallFloyd {
         }
     }
 
-    vector<int> get_path(int u, int v) const {
-        vector<int> ret;
+    std::vector<int> get_path(int u, int v) const {
+        std::vector<int> ret;
         for (int cur = u; cur != v; cur = next[cur][v]) {
             ret.push_back(cur);
         }

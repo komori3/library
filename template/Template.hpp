@@ -60,5 +60,3 @@ using ll = long long;
 using pii = std::pair<int, int>;
 using pll = std::pair<ll, ll>;
 using pdd = std::pair<double, double>;
-
-using namespace std;
