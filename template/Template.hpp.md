@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/verify/aoj-grl-1-c.test.cpp
-    title: test/verify/aoj-grl-1-c.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 1 \"template/Template.hpp\"\n#define _CRT_SECURE_NO_WARNINGS\n\
@@ -71,7 +68,7 @@ data:
     \ false; }\ntemplate<typename A, size_t N, typename T> inline void Fill(A(&array)[N],\
     \ const T& val) { std::fill((T*)array, (T*)(array + N), val); }\n\nusing ll =\
     \ long long;\nusing pii = std::pair<int, int>;\nusing pll = std::pair<ll, ll>;\n\
-    using pdd = std::pair<double, double>;\n\nusing namespace std;\n"
+    using pdd = std::pair<double, double>;\n"
   code: "#define _CRT_SECURE_NO_WARNINGS\n#define _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n\
     #include <unordered_set>\n#ifdef _MSC_VER\n#include <ppl.h>\n#else\n#pragma GCC\
     \ target(\"avx2\")\n#pragma GCC optimize(\"O3\")\n#pragma GCC optimize(\"unroll-loops\"\
@@ -131,15 +128,14 @@ data:
     \ false; }\ntemplate<typename A, size_t N, typename T> inline void Fill(A(&array)[N],\
     \ const T& val) { std::fill((T*)array, (T*)(array + N), val); }\n\nusing ll =\
     \ long long;\nusing pii = std::pair<int, int>;\nusing pll = std::pair<ll, ll>;\n\
-    using pdd = std::pair<double, double>;\n\nusing namespace std;"
+    using pdd = std::pair<double, double>;"
   dependsOn: []
   isVerificationFile: false
   path: template/Template.hpp
   requiredBy: []
-  timestamp: '2021-10-06 02:11:22+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/verify/aoj-grl-1-c.test.cpp
+  timestamp: '2021-10-06 02:43:42+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: template/Template.hpp
 layout: document
 redirect_from:
