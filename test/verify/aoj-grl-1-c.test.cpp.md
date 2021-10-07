@@ -89,6 +89,7 @@ data:
     \ next;\n\n    WarshallFloyd() = default;\n    WarshallFloyd(const T& inf, const\
     \ std::vector<std::vector<T>>& dist) : inf(inf), V((int)dist.size()), dist(dist),\
     \ next(V, std::vector<int>(V)) {}\n    \n    void build() {\n        for (int\
+    \ u = 0; u < V; u++) {\n            dist[u][u] = 0;\n        }\n        for (int\
     \ u = 0; u < V; u++) {\n            for (int v = 0; v < V; v++) {\n          \
     \      next[u][v] = v;\n            }\n        }\n        for (int k = 0; k <\
     \ V; k++) {\n            for (int i = 0; i < V; i++) {\n                if (dist[i][k]\
@@ -134,7 +135,7 @@ data:
   isVerificationFile: true
   path: test/verify/aoj-grl-1-c.test.cpp
   requiredBy: []
-  timestamp: '2021-10-06 02:49:07+09:00'
+  timestamp: '2021-10-07 22:57:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/aoj-grl-1-c.test.cpp
