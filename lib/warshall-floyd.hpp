@@ -15,6 +15,9 @@ struct WarshallFloyd {
     
     void build() {
         for (int u = 0; u < V; u++) {
+            dist[u][u] = 0;
+        }
+        for (int u = 0; u < V; u++) {
             for (int v = 0; v < V; v++) {
                 next[u][v] = v;
             }
