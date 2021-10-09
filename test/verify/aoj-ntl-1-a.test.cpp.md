@@ -5,7 +5,7 @@ data:
     path: lib/factorize-trial-division.hpp
     title: "factorize-trial-division (\u8A66\u3057\u5272\u308A\u306B\u3088\u308B\u7D20\
       \u56E0\u6570\u5206\u89E3)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []

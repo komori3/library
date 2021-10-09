@@ -1,35 +1,34 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: lib/eratosthenes-sieve.hpp
-    title: "sieve of Eratosthenes (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
-      \u7BE9)"
+  - icon: ':x:'
+    path: lib/modpow.hpp
+    title: modpow
   - icon: ':question:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/enumerate_primes
+    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A
     links:
-    - https://judge.yosupo.jp/problem/enumerate_primes
-  bundledCode: "#line 1 \"test/verify/yosupo-enumerate-primes.test.cpp\"\n#define\
-    \ PROBLEM \"https://judge.yosupo.jp/problem/enumerate_primes\"\n\n#line 1 \"template/template.hpp\"\
-    \n#define _CRT_SECURE_NO_WARNINGS\n#define _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n\
-    #line 5 \"template/template.hpp\"\n#ifdef _MSC_VER\n#include <ppl.h>\n#else\n\
-    #pragma GCC target(\"avx2\")\n#pragma GCC optimize(\"O3\")\n#pragma GCC optimize(\"\
-    unroll-loops\")\n#endif\n/* const */\nconstexpr double PI = 3.141592653589793238462643;\n\
-    /* io */\nnamespace aux {\n    template<typename T, unsigned N, unsigned L> struct\
-    \ tp { static void print(std::ostream& os, const T& v) { os << std::get<N>(v)\
-    \ << \", \"; tp<T, N + 1, L>::print(os, v); } };\n    template<typename T, unsigned\
-    \ N> struct tp<T, N, N> { static void print(std::ostream& os, const T& v) { os\
-    \ << std::get<N>(v); } };\n}\ntemplate<typename... Ts> std::ostream& operator<<(std::ostream&\
-    \ os, const std::tuple<Ts...>& t) { os << '['; aux::tp<std::tuple<Ts...>, 0, sizeof...(Ts)\
+    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A
+  bundledCode: "#line 1 \"test/verify/aoj-dpl-1-a.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A\"\
+    \n\n#line 1 \"template/template.hpp\"\n#define _CRT_SECURE_NO_WARNINGS\n#define\
+    \ _USE_MATH_DEFINES\n#include <bits/stdc++.h>\n#line 5 \"template/template.hpp\"\
+    \n#ifdef _MSC_VER\n#include <ppl.h>\n#else\n#pragma GCC target(\"avx2\")\n#pragma\
+    \ GCC optimize(\"O3\")\n#pragma GCC optimize(\"unroll-loops\")\n#endif\n/* const\
+    \ */\nconstexpr double PI = 3.141592653589793238462643;\n/* io */\nnamespace aux\
+    \ {\n    template<typename T, unsigned N, unsigned L> struct tp { static void\
+    \ print(std::ostream& os, const T& v) { os << std::get<N>(v) << \", \"; tp<T,\
+    \ N + 1, L>::print(os, v); } };\n    template<typename T, unsigned N> struct tp<T,\
+    \ N, N> { static void print(std::ostream& os, const T& v) { os << std::get<N>(v);\
+    \ } };\n}\ntemplate<typename... Ts> std::ostream& operator<<(std::ostream& os,\
+    \ const std::tuple<Ts...>& t) { os << '['; aux::tp<std::tuple<Ts...>, 0, sizeof...(Ts)\
     \ - 1>::print(os, t); os << ']'; return os; }\ntemplate <class T, class = typename\
     \ T::iterator, std::enable_if_t<!std::is_same<T, std::string>::value, int> = 0>\
     \ std::ostream& operator<<(std::ostream& os, T const& a);\ntemplate <class T,\
@@ -79,45 +78,50 @@ data:
     \ false; }\ntemplate<typename A, size_t N, typename T> inline void Fill(A(&array)[N],\
     \ const T& val) { std::fill((T*)array, (T*)(array + N), val); }\n\nusing ll =\
     \ long long;\nusing pii = std::pair<int, int>;\nusing pll = std::pair<ll, ll>;\n\
-    using pdd = std::pair<double, double>;\n#line 4 \"test/verify/yosupo-enumerate-primes.test.cpp\"\
-    \n\n#line 1 \"lib/eratosthenes-sieve.hpp\"\n/**\n * @brief sieve of Eratosthenes\
-    \ (\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9)\n * @docs docs/eratosthenes-sieve.md\n\
-    \ */\ntemplate<typename T>\nclass EratosthenesSieve {\npublic:\n    T size;\n\
-    \    std::vector<bool> p;\n    EratosthenesSieve(T size) : size(size), p(size\
-    \ + 1, true) {\n        p[0] = p[1] = false;\n        for (T i = 2; i * i <= size;\
-    \ i++) if (p[i])\n            for (T j = i * i; j <= size; j += i)\n         \
-    \       p[j] = false;\n    }\n    std::vector<T> get_primes() const {\n      \
-    \  std::vector<T> ret;\n        for (T i = 0; i <= size; i++)\n            if\
-    \ (p[i]) ret.push_back(i);\n        return ret;\n    }\n};\n#line 6 \"test/verify/yosupo-enumerate-primes.test.cpp\"\
+    using pdd = std::pair<double, double>;\n#line 4 \"test/verify/aoj-dpl-1-a.test.cpp\"\
+    \n\n#line 1 \"lib/modpow.hpp\"\n/**\n * @brief modpow \n * @docs docs/modpow.md\n\
+    \ */\ntemplate<typename T = int64_t>\nT modpow(T n, T power, T mod) {\n    T res\
+    \ = 1;\n    while (power > 0) {\n        if (power & 1) res = res * n % mod;\n\
+    \        power >>= 1;\n        n = n * n % mod;\n    }\n    return res;\n}\n#line\
+    \ 6 \"test/verify/aoj-dpl-1-a.test.cpp\"\n\nint main() {\n    using std::cin,\
+    \ std::cout, std::endl, std::ios;\n    cin.tie(0);\n    ios::sync_with_stdio(false);\n\
+    \n    constexpr ll inf = INT64_MAX / 8;\n\n    int V, E;\n    cin >> V >> E;\n\
+    \n    auto G = make_vector<ll>(inf, V, V);\n    for (int u = 0; u < V; u++) {\n\
+    \        G[u][u] = 0;\n    }\n    for (int e = 0; e < E; e++) {\n        int u,\
+    \ v;\n        ll w;\n        cin >> u >> v >> w;\n        G[u][v] = w;\n    }\n\
+    \n    WarshallFloyd<ll> wf(inf, G);\n    wf.build();\n\n    if (wf.has_negative_loop())\
+    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n\n\
+    \    for (int i = 0; i < V; i++) {\n        for (int j = 0; j < V; j++) {\n  \
+    \          if (j) cout << ' ';\n            if (wf.dist[i][j] == inf) cout <<\
+    \ \"INF\";\n            else cout << wf.dist[i][j];\n        }\n        cout <<\
+    \ endl;\n    }\n\n    return 0;\n}\n"
+  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A\"\
+    \n\n#include \"../../template/template.hpp\"\n\n#include \"../../lib/modpow.hpp\"\
     \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
-    \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
-    \n    auto primes = EratosthenesSieve(N).get_primes();\n\n    int P = (int)primes.size(),\
-    \ X = (P + A - B - 1) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for\
-    \ (int i = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << '\
-    \ ';\n        cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
-    \ 0;\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/enumerate_primes\"\n\n\
-    #include \"../../template/template.hpp\"\n\n#include \"../../lib/eratosthenes-sieve.hpp\"\
-    \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
-    \    ios::sync_with_stdio(false);\n\n    int N, A, B;\n    cin >> N >> A >> B;\n\
-    \n    auto primes = EratosthenesSieve(N).get_primes();\n\n    int P = (int)primes.size(),\
-    \ X = (P + A - B - 1) / A;\n\n    cout << format(\"%d %d\\n\", P, X);\n    for\
-    \ (int i = 0; A * i + B < (int)primes.size(); i++) {\n        if (i) cout << '\
-    \ ';\n        cout << primes[A * i + B];\n    }\n    cout << '\\n';\n\n    return\
-    \ 0;\n}"
+    \    ios::sync_with_stdio(false);\n\n    constexpr ll inf = INT64_MAX / 8;\n\n\
+    \    int V, E;\n    cin >> V >> E;\n\n    auto G = make_vector<ll>(inf, V, V);\n\
+    \    for (int u = 0; u < V; u++) {\n        G[u][u] = 0;\n    }\n    for (int\
+    \ e = 0; e < E; e++) {\n        int u, v;\n        ll w;\n        cin >> u >>\
+    \ v >> w;\n        G[u][v] = w;\n    }\n\n    WarshallFloyd<ll> wf(inf, G);\n\
+    \    wf.build();\n\n    if (wf.has_negative_loop()) {\n        cout << \"NEGATIVE\
+    \ CYCLE\" << endl;\n        return 0;\n    }\n\n    for (int i = 0; i < V; i++)\
+    \ {\n        for (int j = 0; j < V; j++) {\n            if (j) cout << ' ';\n\
+    \            if (wf.dist[i][j] == inf) cout << \"INF\";\n            else cout\
+    \ << wf.dist[i][j];\n        }\n        cout << endl;\n    }\n\n    return 0;\n\
+    }"
   dependsOn:
   - template/template.hpp
-  - lib/eratosthenes-sieve.hpp
+  - lib/modpow.hpp
   isVerificationFile: true
-  path: test/verify/yosupo-enumerate-primes.test.cpp
+  path: test/verify/aoj-dpl-1-a.test.cpp
   requiredBy: []
-  timestamp: '2021-10-06 04:35:12+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-10-09 16:38:32+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/verify/yosupo-enumerate-primes.test.cpp
+documentation_of: test/verify/aoj-dpl-1-a.test.cpp
 layout: document
 redirect_from:
-- /verify/test/verify/yosupo-enumerate-primes.test.cpp
-- /verify/test/verify/yosupo-enumerate-primes.test.cpp.html
-title: test/verify/yosupo-enumerate-primes.test.cpp
+- /verify/test/verify/aoj-dpl-1-a.test.cpp
+- /verify/test/verify/aoj-dpl-1-a.test.cpp.html
+title: test/verify/aoj-dpl-1-a.test.cpp
 ---

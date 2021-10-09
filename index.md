@@ -17,6 +17,9 @@ data:
       path: lib/factorize-trial-division.hpp
       title: "factorize-trial-division (\u8A66\u3057\u5272\u308A\u306B\u3088\u308B\
         \u7D20\u56E0\u6570\u5206\u89E3)"
+    - icon: ':x:'
+      path: lib/modpow.hpp
+      title: modpow
     - icon: ':heavy_check_mark:'
       path: lib/warshall-floyd.hpp
       title: "Warshall-Floyd (\u30EF\u30FC\u30B7\u30E3\u30EB\u30D5\u30ED\u30A4\u30C9\
@@ -24,12 +27,15 @@ data:
         \ APSP)"
   - name: template
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: template/template.hpp
       title: template/template.hpp
   verificationCategories:
   - name: test/verify
     pages:
+    - icon: ':x:'
+      path: test/verify/aoj-dpl-1-a.test.cpp
+      title: test/verify/aoj-dpl-1-a.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/verify/aoj-grl-1-c.test.cpp
       title: test/verify/aoj-grl-1-c.test.cpp
