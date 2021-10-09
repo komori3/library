@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: lib/modpow.hpp
     title: modpow
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: template/template.hpp
     title: template/template.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A
@@ -85,38 +85,22 @@ data:
     \        power >>= 1;\n        n = n * n % mod;\n    }\n    return res;\n}\n#line\
     \ 6 \"test/verify/aoj-dpl-1-a.test.cpp\"\n\nint main() {\n    using std::cin,\
     \ std::cout, std::endl, std::ios;\n    cin.tie(0);\n    ios::sync_with_stdio(false);\n\
-    \n    constexpr ll inf = INT64_MAX / 8;\n\n    int V, E;\n    cin >> V >> E;\n\
-    \n    auto G = make_vector<ll>(inf, V, V);\n    for (int u = 0; u < V; u++) {\n\
-    \        G[u][u] = 0;\n    }\n    for (int e = 0; e < E; e++) {\n        int u,\
-    \ v;\n        ll w;\n        cin >> u >> v >> w;\n        G[u][v] = w;\n    }\n\
-    \n    WarshallFloyd<ll> wf(inf, G);\n    wf.build();\n\n    if (wf.has_negative_loop())\
-    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n\n\
-    \    for (int i = 0; i < V; i++) {\n        for (int j = 0; j < V; j++) {\n  \
-    \          if (j) cout << ' ';\n            if (wf.dist[i][j] == inf) cout <<\
-    \ \"INF\";\n            else cout << wf.dist[i][j];\n        }\n        cout <<\
-    \ endl;\n    }\n\n    return 0;\n}\n"
+    \n    constexpr ll MOD = 1000000007;\n\n    ll n, k;\n    cin >> n >> k;\n\n \
+    \   cout << modpow(k, n, MOD) << endl;\n\n    return 0;\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_A\"\
     \n\n#include \"../../template/template.hpp\"\n\n#include \"../../lib/modpow.hpp\"\
     \n\nint main() {\n    using std::cin, std::cout, std::endl, std::ios;\n    cin.tie(0);\n\
-    \    ios::sync_with_stdio(false);\n\n    constexpr ll inf = INT64_MAX / 8;\n\n\
-    \    int V, E;\n    cin >> V >> E;\n\n    auto G = make_vector<ll>(inf, V, V);\n\
-    \    for (int u = 0; u < V; u++) {\n        G[u][u] = 0;\n    }\n    for (int\
-    \ e = 0; e < E; e++) {\n        int u, v;\n        ll w;\n        cin >> u >>\
-    \ v >> w;\n        G[u][v] = w;\n    }\n\n    WarshallFloyd<ll> wf(inf, G);\n\
-    \    wf.build();\n\n    if (wf.has_negative_loop()) {\n        cout << \"NEGATIVE\
-    \ CYCLE\" << endl;\n        return 0;\n    }\n\n    for (int i = 0; i < V; i++)\
-    \ {\n        for (int j = 0; j < V; j++) {\n            if (j) cout << ' ';\n\
-    \            if (wf.dist[i][j] == inf) cout << \"INF\";\n            else cout\
-    \ << wf.dist[i][j];\n        }\n        cout << endl;\n    }\n\n    return 0;\n\
-    }"
+    \    ios::sync_with_stdio(false);\n\n    constexpr ll MOD = 1000000007;\n\n  \
+    \  ll n, k;\n    cin >> n >> k;\n\n    cout << modpow(k, n, MOD) << endl;\n\n\
+    \    return 0;\n}"
   dependsOn:
   - template/template.hpp
   - lib/modpow.hpp
   isVerificationFile: true
   path: test/verify/aoj-dpl-1-a.test.cpp
   requiredBy: []
-  timestamp: '2021-10-09 16:38:32+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-10-09 16:40:31+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/verify/aoj-dpl-1-a.test.cpp
 layout: document
